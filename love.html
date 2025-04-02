@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Love ❤️ </title>
+
+    <style>
+        body{
+            background-color: red;
+        }
+        .painel{
+            padding: 40px;
+            background-color: white;
+            margin: auto;
+            width: 500px;
+            height: 500px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        @media (max-width: 600px) {
+            .painel {
+                padding: 15px;
+                width: 90%; /* Menor largura para telas pequenas */
+            }
+        }
+        
+
+        #sim{
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: -50px;
+        }
+
+        #nao{
+            position: absolute;
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="painel">
+        <h1>
+            2 reais ou um Teste Misteirioso?
+        </h1>
+
+        <img src="https://gifman.net/wp-content/uploads/2019/06/ursinhos-fofos-coracoes.gif" alt="">
+
+        <h2>
+            Você deixa eu te fazer feliz?
+        </h2>
+
+       <a href="https://youtube.com/shorts/aueTWlsmAKE?si=HOlqx3yEbK68r1_V"><button id="sim"> Sim!</button></a>
+        <button onmouseover="fuja()" id="nao"> Não!</button>
+
+        
+    
+
+    </div>
+
+    <script>
+        function fuja(){
+            var botaoNao = document.getElementById("nao")
+            var windowLarge = window.innerWidth;
+            var windowHeight = window.innerHeight
+
+            var maxX = windowLarge - botaoNao.offsetWidth
+            var maxY = windowHeight - botaoNao.offsetHeight
+
+            var randomX = Math.floor(Math.random() * maxX);
+            var randomY = Math.floor(Math.random() * maxY);
+
+            botaoNao.style.left = randomX + "px";
+            botaoNao.style.top = randomY + "px";
+
+
+        }
+    </script>
+</body>
+</html>
